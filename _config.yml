@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   libSQL is an open source, open contribution fork of SQLite. We aim to evolve
   it to suit many more use cases than SQLite was originally designed for.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://libsql.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: libsqlhq
 github_username: libsql
 
