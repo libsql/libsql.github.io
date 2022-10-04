@@ -1,0 +1,26 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/images/libsql-square-large.jpg">
+  <meta name="twitter:image:alt" content="{{ site.title }}">
+
+  <meta property="og:image:url" content="{{ site.url }}/images/libsql-1200x630.jpg">
+  <meta property="og:image:alt" content="{{ site.title }}">
+
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" >
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+</head>

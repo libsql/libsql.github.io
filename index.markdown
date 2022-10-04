@@ -2,6 +2,8 @@
 layout: default
 ---
 
+![libSQL logo](/images/favicon/apple-touch-icon.png)
+
 # What is libSQL?
 
 libSQL is an [open source][GitHub], open contribution fork of SQLite. We aim to
@@ -26,8 +28,8 @@ not accept contributions, so community improvements cannot be widely enjoyed.
 
 We want to see a world where everyone can benefit from all of the great ideas
 and hard work that the SQLite community contributes back to the codebase.
-Community contributions work well, because we’ve done it before. If this was
-possible, what do you think SQLite could become?
+Community contributions work well, because [we’ve done it before][qemu-sqlite].
+If this was possible, what do you think SQLite could become?
 
 ## Could SQLite become a distributed database?
 
@@ -123,3 +125,4 @@ uncomfortable.
 [research]: https://www.asafcidon.com/uploads/5/9/7/0/59701649/xrp.pdf
 [user-defined functions]: http://www.sqlite.org/c3ref/create_function.html
 [Discord]: https://discord.gg/TxwbQTWHSr
+[qemu-sqlite]: https://glaubercosta-11125.medium.com/sqlite-qemu-all-over-again-aedad19c9a1c
