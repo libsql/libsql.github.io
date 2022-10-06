@@ -88,7 +88,7 @@ We’re kicking off our efforts on [GitHub], and you can find us on [Discord].
 
 There is nothing to be gained in reinventing greatness, so we will simply build
 upon that with a fork of core SQLite.  Unlike SQLite, this fork will be both
-fully open source (Apache-2.0) and open to community contributions.
+fully open source (MIT) and open to community contributions.
 
 ## Preserve compatibility
 
