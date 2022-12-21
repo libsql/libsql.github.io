@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>About | libSQL</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="About" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="libSQL is an open source, open contribution fork of SQLite. We aim to evolve it to suit many more use cases than SQLite was originally designed for." />
+<meta property="og:description" content="libSQL is an open source, open contribution fork of SQLite. We aim to evolve it to suit many more use cases than SQLite was originally designed for." />
+<link rel="canonical" href="https://libsql.org/about" />
+<meta property="og:url" content="https://libsql.org/about" />
+<meta property="og:site_name" content="libSQL" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="About" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"libSQL is an open source, open contribution fork of SQLite. We aim to evolve it to suit many more use cases than SQLite was originally designed for.","headline":"About","url":"https://libsql.org/about"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://libsql.org/feed.xml" title="libSQL" /><meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@libsqlhq">
+  <meta name="twitter:title" content="libSQL">
+  <meta name="twitter:description" content="libSQL is an open source, open contribution fork of SQLite. We aim to evolve it to suit many more use cases than SQLite was originally designed for.">
+  <meta name="twitter:image" content="https://libsql.org/images/libsql-square-large.png">
+  <meta name="twitter:image:alt" content="libSQL">
+
+  <meta property="og:image:url" content="https://libsql.org/images/libsql-1200x630.png">
+  <meta property="og:image:alt" content="libSQL">
+
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" >
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">libSQL</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="about-libsql">About libSQL</h1>
+
+<h2 id="motivations">Motivations</h2>
+
+<h3 id="we-like-sqlite-a-lot-and-with-modifications">We like SQLite a lot, and with modifications.</h3>
+
+<p>Wildly successful, and broadly useful, SQLite has solidified its place in modern
+technology stacks, embedded in nearly any computing device you can think of. Its
+open source nature and public domain availability make it a popular choice for
+modification to meet specific use cases.</p>
+
+<h3 id="hack-sqlite-internally-or-externally">Hack SQLite internally or externally?</h3>
+
+<p>It seems to us that there are two obvious avenues to modify SQLite: forking the
+code to add features directly to it, or running it on top of a modified OS.
+History suggests that neither of these work well. The way we see it, this is a
+result of one major limitation of the software: SQLite is open source but does
+not accept contributions, so community improvements cannot be widely enjoyed.</p>
+
+<h3 id="sqlite-needs-to-open-contributions">SQLite needs to open contributions.</h3>
+
+<p>We want to see a world where everyone can benefit from all of the great ideas
+and hard work that the SQLite community contributes back to the codebase.
+Community contributions work well, because <a href="https://glaubercosta-11125.medium.com/sqlite-qemu-all-over-again-aedad19c9a1c">we’ve done it before</a>.
+If this was possible, what do you think SQLite could become?</p>
+
+<h3 id="could-sqlite-become-a-distributed-database">Could SQLite become a distributed database?</h3>
+
+<p>SQLite is gaining ground in edge use cases, since it is fast, embeddable, and
+matches well the read-mostly, low-to-medium volume of data use cases that often
+arise at the edge. But there is still the problem of how to make the data
+available in all nodes.</p>
+
+<p>That is challenging to do without support from the core database. Without proper
+hooks, existing solutions either build a different database around SQLite (like
+dqlite, rqlite, ChiselStore), or have to replicate at the filesystem layer
+(LiteFS).</p>
+
+<p>What if we could do it natively?</p>
+
+<h3 id="could-sqlite-be-optimized-with-an-asynchronous-api">Could SQLite be optimized with an asynchronous API?</h3>
+
+<p>Recently, Linux has gained a new supposedly magical interface called [io_uring].
+It leverages Asynchronous I/O and has been slowly but surely gaining adoption
+everywhere. Other databases like Postgres have already adopted it for
+asynchronous I/O, but this hasn’t made its way to SQLite. Supposedly because
+SQLite interfaces are synchronous. But with asynchronous runtimes and interfaces
+gaining popularity in both languages and the Kernel, is it time to add a new,
+async interface to SQLite, that plays well with io_uring?</p>
+
+<h3 id="could-sqlite-be-embedded-in-the-linux-kernel">Could SQLite be embedded in the Linux kernel?</h3>
+
+<p>Another innovation in the Linux Kernel is <a href="https://www.scylladb.com/2020/05/05/how-io_uring-and-ebpf-will-revolutionize-programming-in-linux/">eBPF</a>. That is a domain-specific VM
+that allows programs to execute in the kernel. Although still mainly used for
+tracing, there’s <a href="https://www.asafcidon.com/uploads/5/9/7/0/59701649/xrp.pdf">research</a> about pushing complex data functions like B-Tree
+lookups entirely in the kernel, as close as possible to NVMe devices. What if
+SQLite could take advantage of that, and also be unbeatable in workloads that
+don’t fit in memory?</p>
+
+<h3 id="could-sqlite-support-wasm-user-defined-functions">Could SQLite support WASM user-defined functions?</h3>
+
+<p>SQLite does support <a href="http://www.sqlite.org/c3ref/create_function.html">user-defined functions</a>. But there are two big problems
+with how they are approached: first, functions are written in C, which is
+increasingly becoming a tall ask for most developers with safety in mind. WASM
+is growing in popularity, allowing developers to write functions in their
+preferred language and be safely executed.</p>
+
+<p>Second, once a function proves itself generally useful, the “not Open
+Contribution” policy makes it difficult for it to be included in the standard
+distribution of SQLite.</p>
+
+<h3 id="could-you-be-a-part-of-the-team-that-makes-these-possible">Could you be a part of the team that makes these possible?</h3>
+
+<p>We’ve decided that now is the time to take SQLite to the places where the
+community wants to be.  Are you interested in building the future of SQLite?
+We’re kicking off our efforts on [GitHub], and you can find us on <a href="https://discord.gg/TxwbQTWHSr">Discord</a>.</p>
+
+<h2 id="our-plan">Our plan</h2>
+
+<h3 id="start-with-a-fork-of-sqlite">Start with a fork of SQLite</h3>
+
+<p>There is nothing to be gained in reinventing greatness, so we will simply build
+upon that with a fork of core SQLite.  Unlike SQLite, this fork will be both
+fully open source (MIT) and open to community contributions.</p>
+
+<h3 id="preserve-compatibility">Preserve compatibility</h3>
+
+<p>We are committed to preserving compatibility with everything that was previously
+written for SQLite.  All of your favorite tools and libraries will continue to
+work as-is.</p>
+
+<h3 id="preserve-stability">Preserve stability</h3>
+
+<p>SQLite is a very well-tested piece of software.  We admire that, and commit to
+preserving the existing test suite while expanding it for the new code we add.</p>
+
+<h3 id="use-rust-for-new-features">Use Rust for new features</h3>
+
+<p>We intend to add Rust to implement new capabilities, but not exclusively so.
+The existing C codebase already serves as a great foundation for
+interoperability with other languages and systems, and we don’t intend to change
+that.</p>
+
+<h3 id="rejoin-core-sqlite-if-its-policy-changes">Rejoin core SQLite if its policy changes</h3>
+
+<p>We are strong believers in open source that is also open to community contributions. If and when SQLite changes its policy to accept contributions, we will gladly merge our work back into the core product and continue in that space.</p>
+
+<h3 id="adhere-to-a-code-of-conduct">Adhere to a code of conduct</h3>
+
+<p>We take our code of conduct seriously, and unlike SQLite, we do not substitute
+it with an unclear alternative.  We strive to foster a community that values
+diversity, equity, and inclusion.  We encourage others to speak up if they feel
+uncomfortable.</p>
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">libSQL</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <div>Continue the conversation with us!</div>
+        <ul >
+          <li class="p-name">
+            <a href="https://github.com/libsql/libsql/discussions">GitHub discussions</a>
+          </li>
+          <li class="p-name">
+            <a href="https://discord.gg/TxwbQTWHSr">Discord</a>
+          </li><li><a class="u-email" href="mailto:community@libsql.org">community@libsql.org</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/libsql"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">libsql</span></a></li><li><a href="https://www.twitter.com/libsqlhq"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">libsqlhq</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>libSQL is an open source, open contribution fork of SQLite. We aim to evolve it to suit many more use cases than SQLite was originally designed for.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
