@@ -39,7 +39,8 @@ available in all nodes.
 
 That is challenging to do without support from the core database. Without proper
 hooks, existing solutions either build a different database around SQLite (like
-dqlite, rqlite, Turso), or have to replicate at the filesystem layer (LiteFS).
+dqlite, rqlite, ChiselStore), or have to replicate at the filesystem layer
+(LiteFS).
 
 What if we could do it natively?
 
