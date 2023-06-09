@@ -36,7 +36,7 @@ libSQL is developed under the [MIT license] with a clear [code of conduct].
 [code of conduct]: https://github.com/libsql/libsql/blob/main/CODE_OF_CONDUCT.md
 [Open issues on GitHub]: https://github.com/libsql/libsql/issues
 [PR 45]: https://github.com/libsql/libsql/pull/45
-[wasm-blog]: https://blog.chiselstrike.com/webassembly-functions-for-your-sqlite-compatible-database-7e1ad95a2aa7
+[wasm-blog]: https://blog.turso.tech/webassembly-functions-for-your-sqlite-compatible-database-7e1ad95a2aa7
 [Issue 12]: https://github.com/libsql/libsql/issues/12
 [PR 53]: https://github.com/libsql/libsql/pull/53
 [PR 87]: https://github.com/libsql/libsql/pull/87
