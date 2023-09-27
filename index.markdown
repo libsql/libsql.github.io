@@ -1,5 +1,6 @@
 ---
 layout: default
+redirect_to: https://turso.tech/libsql
 ---
 
 ![libSQL logo](/images/favicon/apple-touch-icon.png)
