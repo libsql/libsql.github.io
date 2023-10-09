@@ -2,6 +2,7 @@
 layout: default
 title: About
 permalink: /about
+redirect_to: https://turso.tech/libsql-manifesto
 ---
 
 # About libSQL
